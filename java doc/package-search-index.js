@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.example.c195","l":"com.example.c195"},{"m":"com.example.c195","l":"controller"},{"m":"com.example.c195","l":"DAO"},{"m":"com.example.c195","l":"helper"},{"m":"com.example.c195","l":"Interfaces"},{"m":"com.example.c195","l":"model"}];updateSearchResults();

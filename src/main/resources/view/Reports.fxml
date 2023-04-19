@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reports">
+   <children>
+      <AnchorPane layoutX="639.0" layoutY="33.0">
+         <children>
+            <Label text="Reports" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="346.0" layoutY="60.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Total number of customer appointments by type and month:">
+                     <HBox.margin>
+                        <Insets right="10.0" top="35.0" />
+                     </HBox.margin>
+                  </Label>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Month" textAlignment="CENTER" GridPane.halignment="CENTER" />
+                        <Label text="Type" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <Label text="Total" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <ComboBox fx:id="monthCombo" onAction="#onActonMonthCombo" prefWidth="150.0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="typeCombo" onAction="#onActionTypeCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="appointmentsTotalLabel" prefWidth="50.0" style="-fx-border-color: Black;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="25.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="529.0" layoutY="135.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Schedule by Contact: " />
+                  <ComboBox fx:id="contactCombo" onAction="#onActionContactCombo" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="70.0" layoutY="185.0">
+         <children>
+            <TableView fx:id="AppointmentTable" prefWidth="1200.0">
+               <columns>
+                  <TableColumn fx:id="Appointment_ID" prefWidth="78.0" text="Appointment ID" />
+                  <TableColumn fx:id="Title" prefWidth="54.0" text="Title" />
+                  <TableColumn fx:id="Description" prefWidth="75.0" text="Description" />
+                  <TableColumn fx:id="Location" prefWidth="75.0" text="Location" />
+                  <TableColumn fx:id="Contact" prefWidth="75.0" text="Contact" />
+                  <TableColumn fx:id="Type" prefWidth="75.0" text="Type" />
+                  <TableColumn fx:id="Start" prefWidth="75.0" text="Start" />
+                  <TableColumn fx:id="End" prefWidth="75.0" text="End" />
+                  <TableColumn fx:id="Customer_ID" prefWidth="75.0" text="Customer ID" />
+                  <TableColumn fx:id="User_ID" prefWidth="75.0" text="User ID" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="454.0" layoutY="610.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Total number of customers by country:">
+                     <HBox.margin>
+                        <Insets right="10.0" top="35.0" />
+                     </HBox.margin>
+                  </Label>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Country" textAlignment="CENTER" GridPane.halignment="CENTER" />
+                        <Label text="Total" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <ComboBox fx:id="countryCombo" onAction="#onActionCountryCombo" prefWidth="150.0" GridPane.rowIndex="1" />
+                        <Label fx:id="customersTotalLabel" prefWidth="50.0" style="-fx-border-color: Black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="25.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="622.0" layoutY="685.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionMainMenu" text="Main Menu" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

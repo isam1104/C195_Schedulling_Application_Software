@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="711.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customers">
+   <children>
+      <Label layoutX="423.0" layoutY="23.0" prefHeight="36.0" prefWidth="135.0" text="Customers">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <TableView fx:id="CustomerTable" layoutX="14.0" layoutY="121.0" prefWidth="1200.0">
+         <columns>
+            <TableColumn fx:id="Customer_ID" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="Customer_Name" prefWidth="75.0" text="Customer Name" />
+            <TableColumn fx:id="Address" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="Postal_Code" prefWidth="75.0" text="Postal Code" />
+            <TableColumn fx:id="Phone_Number" prefWidth="75.0" text="Phone Number" />
+            <TableColumn fx:id="Create_Date" prefWidth="75.0" text="Create Date" />
+            <TableColumn fx:id="Create_By" prefWidth="75.0" text="Created By" />
+            <TableColumn fx:id="Last_Update" prefWidth="75.0" text="Last Update" />
+            <TableColumn fx:id="Last_Updated_By" prefWidth="75.0" text="Last Updated By" />
+            <TableColumn fx:id="Division_ID" prefWidth="75.0" text="Division_ID" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="404.0" layoutY="538.0">
+         <children>
+            <HBox prefHeight="26.0" prefWidth="218.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionAddCustomer" prefHeight="26.0" prefWidth="59.0" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#onActionModifyCustomer" text="Modify" />
+                  <Button mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefHeight="26.0" prefWidth="67.0" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Button layoutX="467.0" layoutY="585.0" mnemonicParsing="false" onAction="#onActionMainMenu" text="Main Menu" />
+      <HBox layoutX="366.0" layoutY="71.0" prefHeight="27.0" prefWidth="278.0" spacing="10.0">
+         <children>
+            <TextField fx:id="mainmenucustomerSearchtxt" prefHeight="26.0" prefWidth="213.0" promptText="Search by Customer ID or Name" />
+            <Button mnemonicParsing="false" onAction="#onActionSearchCustomers" text="Search" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

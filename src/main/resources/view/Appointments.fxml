@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="869.0" prefWidth="1478.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Appointments">
+   <children>
+      <AnchorPane layoutX="543.0" layoutY="14.0">
+         <children>
+            <Label text="Appointments">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="533.0" layoutY="50.0">
+         <children>
+            <HBox prefHeight="18.0" prefWidth="218.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="allRadioButton" mnemonicParsing="false" onAction="#onActionAll" text="All" />
+                  <RadioButton fx:id="monthRadioButton" mnemonicParsing="false" onAction="#onActionMonth" text="Month" />
+                  <RadioButton fx:id="weekRadioButton" mnemonicParsing="false" onAction="#onActionWeek" text="Week" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="87.0">
+         <children>
+            <TableView fx:id="AppointmentTable" prefWidth="1200.0">
+               <columns>
+                  <TableColumn fx:id="Appointment_ID" prefWidth="100.0" text="Appointment ID" />
+                  <TableColumn fx:id="Title" prefWidth="150.0" text="Title" />
+                  <TableColumn fx:id="Description" prefWidth="150.0" text="Description" />
+                  <TableColumn fx:id="Location" prefWidth="75.0" text="Location" />
+                  <TableColumn fx:id="Contact" prefWidth="75.0" text="Contact" />
+                  <TableColumn fx:id="Type" prefWidth="75.0" text="Type" />
+                  <TableColumn fx:id="Start" prefWidth="110.0" text="Start" />
+                  <TableColumn fx:id="End" prefWidth="110.0" text="End" />
+                  <TableColumn fx:id="Customer_ID" prefWidth="90.0" text="Customer ID" />
+                  <TableColumn fx:id="User_ID" prefWidth="75.0" text="User ID" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="533.0" layoutY="505.0">
+         <children>
+            <HBox prefHeight="26.0" prefWidth="191.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionAddAppointment" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#onActionModifyAppointment" text="Modify" />
+                  <Button mnemonicParsing="false" onAction="#onActionDeleteAppointment" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="576.0" layoutY="551.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionMainMenu" text="Main Menu" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
